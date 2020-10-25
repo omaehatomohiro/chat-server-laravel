@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Aggregation extends Model
 {
-    protected $fillable = ['userAction'];
+    protected $fillable = ['userAction','url'];
 }

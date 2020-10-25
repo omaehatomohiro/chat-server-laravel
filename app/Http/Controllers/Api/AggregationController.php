@@ -16,7 +16,11 @@ class AggregationController extends Controller
     public function index(Request $request)
     {
         $param = $request->action;
-        Aggregation::create(['userAction' => $param]);
+        $url = $request->url;
+        Aggregation::create([
+            'userAction' => $param,
+            'url' => $url,
+        ]);
         return response('Hello World', 200)->header('Content-Type', 'text/plain');
     }
 
